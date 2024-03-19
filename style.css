@@ -1,0 +1,93 @@
+body {
+  background-color: #ccc;
+}
+#toast {
+  position: fixed;
+  top: 30px;
+right: 20px
+}
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 80px;
+  border-left: 8px solid;
+  border-color: green;
+ position: relative;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  /* animation: slideInLeft ease-in-out 0.3s, fadeOut ease 1s 3s forwards; */
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(calc(100% + 32px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+.toast_icon {
+  padding: 8px;
+  background-color: green;
+  border-radius: 50%;
+  margin: 0px 8px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toast_body {
+  flex-grow: 1;
+  padding: 0px 12px;
+  line-height: 24px;
+}
+.toast_close {
+  padding: 20px;
+  font-size: 24px;
+}
+.toast_title {
+  font-weight: 800;
+  font-size: 20px;
+}
+.toast + .toast {
+  margin-top: 20px;
+}
+.toast_inf {
+  border-color: blue;
+}
+.toast_warning {
+  border-color: yellow;
+}
+.toast_error {
+  border-color: red;
+}
+/* btn */
+.btn {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn *{
+    margin: 0px 8px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn button:first-child{
+    background-color: green;
+    color: white
+}
+.btn button:last-child{
+    background-color: red;
+    color: black;
+    z-index: 9999
+}
+
